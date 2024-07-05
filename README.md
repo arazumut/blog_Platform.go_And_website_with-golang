@@ -6,7 +6,7 @@ Bu projenin amacı, kullanıcıların yazı yazabileceği, bu yazıları paylaş
 Proje Özeti
 
 Blog Platformu, kullanıcıların kayıt olup giriş yapabilecekleri, yeni blog yazıları oluşturabilecekleri, mevcut yazıları düzenleyip silebilecekleri ve bu yazılara yorum yapabilecekleri bir web uygulamasıdır. Uygulama, kullanıcıların içerik oluşturma, düzenleme ve diğer kullanıcılarla etkileşime geçme gibi temel işlevleri gerçekleştirmelerine olanak tanır. Platform, basit ve kullanıcı dostu bir arayüzle, yazıların ve yorumların yönetimini sağlar.
-Temel Özellikler
+Temel Özellikler 
 
     Kullanıcı Kayıt ve Giriş Sistemi: Kullanıcılar platforma kayıt olabilir ve mevcut hesaplarıyla giriş yapabilirler.
     Yazı Ekleme, Düzenleme ve Silme: Kullanıcılar yeni blog yazıları oluşturabilir, bu yazıları düzenleyebilir ve gerekirse silebilirler.
