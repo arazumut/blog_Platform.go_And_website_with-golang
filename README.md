@@ -3,7 +3,7 @@ Proje Adı: Blog Platformu
 Proje Amacı
 
 Bu projenin amacı, kullanıcıların yazı yazabileceği, bu yazıları paylaşabileceği ve diğer kullanıcıların bu yazılara yorum yapabileceği bir blog platformu geliştirmektir. Platform, kullanıcıların kendi içeriklerini oluşturma ve başkalarının içeriklerini görüntüleyip etkileşimde bulunma süreçlerini kolaylaştırmayı hedeflemektedir. Proje, temel web geliştirme becerilerini öğrenmek ve uygulamak isteyen bireyler için pratik bir örnek teşkil etmektedir.
-Proje Özeti
+Proje Özeti 
 
 Blog Platformu, kullanıcıların kayıt olup giriş yapabilecekleri, yeni blog yazıları oluşturabilecekleri, mevcut yazıları düzenleyip silebilecekleri ve bu yazılara yorum yapabilecekleri bir web uygulamasıdır. Uygulama, kullanıcıların içerik oluşturma, düzenleme ve diğer kullanıcılarla etkileşime geçme gibi temel işlevleri gerçekleştirmelerine olanak tanır. Platform, basit ve kullanıcı dostu bir arayüzle, yazıların ve yorumların yönetimini sağlar.
 Temel Özellikler 
