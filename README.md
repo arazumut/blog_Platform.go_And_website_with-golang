@@ -14,6 +14,7 @@ Temel Özellikler
 
 Teknolojiler ve Araçlar
 
+
     Programlama Dili: Go (Golang)
     Go, yüksek performanslı ve verimli uygulamalar geliştirmek için kullanılan modern bir programlama dilidir. Go'nun basitliği ve güçlü kütüphane desteği, bu projenin temel yapı taşlarından biridir.
     Web Çerçevesi: Gorilla Mux
