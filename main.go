@@ -1,3 +1,4 @@
+//website_golang
 package main
 
 import (
@@ -15,6 +16,7 @@ func indexHandler(w http.ResponseWriter, r *http.Request) {
 	renderTemplate(w, "index.html")
 }
 
+//Produced By K. Umut Araz
 // Hakkında sayfası için handler
 func aboutHandler(w http.ResponseWriter, r *http.Request) {
 	log.Println("aboutHandler çağrıldı")
