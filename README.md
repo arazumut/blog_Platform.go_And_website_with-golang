@@ -47,3 +47,60 @@ Kullanıcı İş Akışı
 Sonuç
 
 Blog Platformu, temel bir blog sistemi geliştirmek için gerekli olan tüm bileşenleri içeren kapsamlı bir projedir. Kullanıcı kayıt ve giriş sistemi, yazı oluşturma, düzenleme ve silme, yorum yapma ve listeleme gibi işlevler, bu projenin temel özelliklerindendir. Proje, Go programlama dilini kullanarak modern web uygulamaları geliştirmek isteyen kişiler için uygun bir öğrenme ve uygulama fırsatı sunmaktadır. Projenin ilerleyen aşamalarında, veri tabanı entegrasyonu, gelişmiş kimlik doğrulama yöntemleri ve daha zengin kullanıcı arayüzleri gibi ek özellikler eklenerek platformun işlevselliği artırılabilir.
+
+ <a href="https://golang.org/" target="_blank" rel="noreferrer"> 
+        <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/go/go-original.svg" alt="golang" width="40" height="40"/> 
+    </a>
+    <br>
+Go ile Basit Bir Web Uygulaması Geliştirme
+Giriş
+Bu makale, Go programlama dili kullanılarak geliştirilmiş basit bir web uygulamasının işleyişini ve bileşenlerini açıklamaktadır. Web uygulaması, kullanıcıların iki farklı sayfaya (ana sayfa ve hakkında sayfası) erişebilmesini sağlayan bir HTTP sunucusunu içermektedir. Uygulama, temel HTTP yönlendirmeleri ve şablonlar kullanılarak dinamik içerik sunma konularını ele almaktadır.
+
+Proje Yapısı
+Proje aşağıdaki dosya yapısına sahiptir:
+
+css
+Kodu kopyala
+mywebsite/
+├── main.go
+├── templates/
+│   ├── index.html
+│   └── about.html
+Ana Dosya: main.go
+main.go dosyası, uygulamanın ana çalışma dosyasıdır ve HTTP sunucusunu başlatan, yönlendirmeleri tanımlayan ve şablonları render eden fonksiyonları içerir.
+
+Paketlerin İçe Aktarılması
+Uygulama, html/template, log ve net/http paketlerini içe aktarmaktadır. html/template paketi, HTML şablonlarını işlemek için kullanılırken, log paketi hata ve bilgi mesajlarını kaydetmek için kullanılmaktadır. net/http paketi ise HTTP sunucusunu oluşturmak ve yönetmek için kullanılır.
+
+Şablonların Yüklenmesi
+Uygulama başlatıldığında, şablon dosyaları template.Must(template.ParseGlob("templates/*.html")) komutu ile yüklenir. Bu, templates klasöründeki tüm .html dosyalarını yükler ve bir hata oluşursa programın başlatılmasını engeller.
+
+HTTP Yönlendirmeleri
+Uygulama, iki temel yönlendirme tanımlar:
+
+/: Ana sayfa yönlendirmesi
+/about: Hakkında sayfası yönlendirmesi
+Bu yönlendirmeler, http.HandleFunc fonksiyonu kullanılarak tanımlanır ve her biri bir handler fonksiyonuna yönlendirilir.
+
+Handler Fonksiyonları
+Handler fonksiyonları, belirli bir URL'ye gelen HTTP isteklerini işler. Bu uygulamada iki handler fonksiyonu bulunmaktadır:
+
+indexHandler: Ana sayfa isteklerini işler. renderTemplate fonksiyonunu çağırarak index.html şablonunu render eder.
+aboutHandler: Hakkında sayfası isteklerini işler. renderTemplate fonksiyonunu çağırarak about.html şablonunu render eder.
+Şablonları Render Eden Fonksiyon
+renderTemplate fonksiyonu, belirli bir şablon dosyasını render eder ve sonucu HTTP yanıtına yazar. Eğer şablon render edilirken bir hata oluşursa, bu hata HTTP yanıtına yazılır ve istemciye gönderilir.
+
+Sunucunun Başlatılması
+main fonksiyonu, tüm yönlendirmeleri tanımladıktan sonra, log.Fatal(http.ListenAndServe(":8080", nil)) komutunu kullanarak HTTP sunucusunu başlatır. Bu komut, sunucunun localhost üzerindeki 8080 portunda çalışmasını sağlar. Eğer sunucu başlatılırken bir hata oluşursa, bu hata log.Fatal ile kaydedilir ve program sonlandırılır.
+
+Şablon Dosyaları
+index.html
+index.html dosyası, ana sayfa içeriğini tanımlar. HTML yapısında bir başlık, bir hoş geldiniz mesajı ve hakkında sayfasına yönlendiren bir bağlantı içerir.
+
+about.html
+about.html dosyası, hakkında sayfası içeriğini tanımlar. HTML yapısında bir başlık, bir açıklama ve ana sayfaya yönlendiren bir bağlantı içerir.
+
+Sonuç
+Bu basit Go web uygulaması, HTTP yönlendirmeleri ve şablonları kullanarak dinamik içerik sunmanın temel adımlarını göstermektedir. Go dilinin sunduğu güçlü ve performanslı yapılar sayesinde, daha karmaşık web uygulamaları ve API'ler kolaylıkla geliştirilebilir. Bu örnek, temel HTTP sunucusu işleyişi, yönlendirme ve şablon işleme konularında iyi bir başlangıç noktası sunmaktadır. Gerçek dünya uygulamalarında, veritabanı entegrasyonu, güvenlik önlemleri ve ölçeklenebilirlik gibi konulara da dikkat edilmelidir.    
+
+
