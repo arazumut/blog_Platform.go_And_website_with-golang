@@ -1,25 +1,42 @@
 package main
 
 import (
+	"html/template"
+	"log"
 	"net/http"
-
-	"github.com/gorilla/mux"
 )
 
+// Şablonları önceden yükleyin
+var templates = template.Must(template.ParseGlob("templates/*.html"))
+
+// Ana sayfa için handler
+func indexHandler(w http.ResponseWriter, r *http.Request) {
+	log.Println("indexHandler çağrıldı")
+	renderTemplate(w, "index.html")
+}
+
+// Hakkında sayfası için handler
+func aboutHandler(w http.ResponseWriter, r *http.Request) {
+	log.Println("aboutHandler çağrıldı")
+	renderTemplate(w, "about.html")
+}
+
+// Şablonları render eden yardımcı fonksiyon
+func renderTemplate(w http.ResponseWriter, tmpl string) {
+	log.Printf("%s şablonu render ediliyor", tmpl)
+	err := templates.ExecuteTemplate(w, tmpl, nil)
+	if err != nil {
+		log.Printf("Şablon render hatası: %v", err)
+		http.Error(w, err.Error(), http.StatusInternalServerError)
+	}
+}
+
 func main() {
-	router := mux.NewRouter()
+	// Yönlendirme
+	http.HandleFunc("/", indexHandler)
+	http.HandleFunc("/about", aboutHandler)
 
-	// Route handlers
-	router.HandleFunc("/", HomeHandler).Methods("GET")
-	router.HandleFunc("/register", RegisterHandler).Methods("GET", "POST")
-	router.HandleFunc("/login", LoginHandler).Methods("GET", "POST")
-	router.HandleFunc("/logout", LogoutHandler).Methods("GET")
-	router.HandleFunc("/post/new", CreatePostHandler).Methods("GET", "POST")
-	router.HandleFunc("/post/{id}", ViewPostHandler).Methods("GET")
-	router.HandleFunc("/post/{id}/edit", EditPostHandler).Methods("GET", "POST")
-	router.HandleFunc("/post/{id}/delete", DeletePostHandler).Methods("POST")
-	router.HandleFunc("/post/{id}/comment", CommentHandler).Methods("POST")
-
-	http.Handle("/", router)
-	http.ListenAndServe(":8080", nil)
+	// Sunucuyu başlat
+	log.Println("Sunucu http://localhost:8080 adresinde çalışıyor...")
+	log.Fatal(http.ListenAndServe(":8080", nil))
 }
