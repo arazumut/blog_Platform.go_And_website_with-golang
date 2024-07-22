@@ -103,4 +103,6 @@ about.html dosyası, hakkında sayfası içeriğini tanımlar. HTML yapısında 
 Sonuç
 Bu basit Go web uygulaması, HTTP yönlendirmeleri ve şablonları kullanarak dinamik içerik sunmanın temel adımlarını göstermektedir. Go dilinin sunduğu güçlü ve performanslı yapılar sayesinde, daha karmaşık web uygulamaları ve API'ler kolaylıkla geliştirilebilir. Bu örnek, temel HTTP sunucusu işleyişi, yönlendirme ve şablon işleme konularında iyi bir başlangıç noktası sunmaktadır. Gerçek dünya uygulamalarında, veritabanı entegrasyonu, güvenlik önlemleri ve ölçeklenebilirlik gibi konulara da dikkat edilmelidir.    
 
+![Ekran görüntüsü 2024-07-22 105532](https://github.com/user-attachments/assets/08fd8ce2-368c-4de3-8bc5-8a8f1927029c)
+![Ekran görüntüsü 2024-07-22 105459](https://github.com/user-attachments/assets/b4666e66-2f7b-4347-8cd7-7d3f7a005c41)
 
