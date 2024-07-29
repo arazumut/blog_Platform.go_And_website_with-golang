@@ -84,6 +84,7 @@ Bu yönlendirmeler, http.HandleFunc fonksiyonu kullanılarak tanımlanır ve her
 Handler Fonksiyonları
 Handler fonksiyonları, belirli bir URL'ye gelen HTTP isteklerini işler. Bu uygulamada iki handler fonksiyonu bulunmaktadır:
 
+
 indexHandler: Ana sayfa isteklerini işler. renderTemplate fonksiyonunu çağırarak index.html şablonunu render eder.
 aboutHandler: Hakkında sayfası isteklerini işler. renderTemplate fonksiyonunu çağırarak about.html şablonunu render eder.
 Şablonları Render Eden Fonksiyon
