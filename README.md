@@ -2,7 +2,7 @@
         <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/go/go-original.svg" alt="golang" width="40" height="40"/> 
     </a>
     <br>
-Proje Raporu: Blog Platformu
+Proje Raporu: Blog Platformu <br>
 Proje Adı: Blog Platformu
 Proje Amacı
 Bu projenin amacı, kullanıcıların yazı yazabileceği, bu yazıları paylaşabileceği ve diğer kullanıcıların bu yazılara yorum yapabileceği bir blog platformu geliştirmektir. Platform, kullanıcıların kendi içeriklerini oluşturma ve başkalarının içeriklerini görüntüleyip etkileşimde bulunma süreçlerini kolaylaştırmayı hedeflemektedir. Proje, temel web geliştirme becerilerini öğrenmek ve uygulamak isteyen bireyler için pratik bir örnek teşkil etmektedir.
