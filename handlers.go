@@ -66,6 +66,7 @@ func EditPostHandler(w http.ResponseWriter, r *http.Request) {
 	templates.ExecuteTemplate(w, "edit.html", nil)
 }
 
+
 func DeletePostHandler(w http.ResponseWriter, r *http.Request) {
 	// Delete post logic
 	vars := mux.Vars(r)
