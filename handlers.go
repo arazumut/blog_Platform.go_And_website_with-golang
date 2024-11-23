@@ -34,6 +34,7 @@ func LoginHandler(w http.ResponseWriter, r *http.Request) {
 	templates.ExecuteTemplate(w, "login.html", nil)
 }
 
+
 func LogoutHandler(w http.ResponseWriter, r *http.Request) {
 	// Logout logic
 	session, _ := store.Get(r, "session-name")
